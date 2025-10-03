@@ -1,0 +1,686 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "timestamp": "2025-10-03T11:21:02.784300Z",
+  "results": [
+    {
+      "name": "GET / root 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "GET /health 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "GET /salesforce/health",
+      "status": "PASS",
+      "info": "code=200, payload={\"status\":\"ok\",\"records\":50}"
+    },
+    {
+      "name": "GET /jira/health",
+      "status": "PASS",
+      "info": "code=200, payload={\"status\":\"ok\",\"records\":50}"
+    },
+    {
+      "name": "GET /salesforce paginated",
+      "status": "PASS",
+      "info": "code=200, count=5"
+    },
+    {
+      "name": "GET /jira paginated",
+      "status": "PASS",
+      "info": "code=200, count=5"
+    },
+    {
+      "name": "GET /mcp/accounts 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "MCP items present",
+      "status": "PASS",
+      "info": "len=50"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1000, OpenIssues=6, Px_sum=6"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=2024-04-04"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1001, OpenIssues=8, Px_sum=8"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=2024-04-25"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1002, OpenIssues=5, Px_sum=5"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=2024-05-02"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1003, OpenIssues=9, Px_sum=9"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=2024-02-08"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1004, OpenIssues=7, Px_sum=7"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=2024-05-09"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1005, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1006, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1007, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1008, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1009, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1010, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1011, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1012, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1013, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1014, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1015, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1016, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1017, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1018, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1019, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1020, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1021, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1022, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1023, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1024, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1025, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1026, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1027, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1028, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1029, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1030, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1031, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1032, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1033, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1034, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1035, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1036, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1037, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1038, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1039, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1040, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1041, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1042, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1043, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1044, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1045, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1046, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1047, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1048, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "sum(Px) <= OpenIssues",
+      "status": "PASS",
+      "info": "AccountID=A1049, OpenIssues=0, Px_sum=0"
+    },
+    {
+      "name": "LastIssueDate ISO or None",
+      "status": "PASS",
+      "info": "LastIssueDate=None"
+    },
+    {
+      "name": "GET /mcp/accounts/{id} 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "Single account has LinkedIssues list",
+      "status": "PASS",
+      "info": "len=10"
+    },
+    {
+      "name": "top-revenue P1 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "top-revenue P1 sorted desc",
+      "status": "PASS",
+      "info": "ARRs=[412690, 147848, 137948, 102787, 65016]"
+    },
+    {
+      "name": "top-revenue P1 all have open>0",
+      "status": "PASS",
+      "info": "items=5"
+    },
+    {
+      "name": "top-revenue P2 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "top-revenue P2 sorted desc",
+      "status": "PASS",
+      "info": "ARRs=[412690, 147848, 137948, 102787, 65016]"
+    },
+    {
+      "name": "top-revenue P2 all have open>0",
+      "status": "PASS",
+      "info": "items=5"
+    },
+    {
+      "name": "top-revenue P3 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "top-revenue P3 sorted desc",
+      "status": "PASS",
+      "info": "ARRs=[412690, 137948, 102787, 65016]"
+    },
+    {
+      "name": "top-revenue P3 all have open>0",
+      "status": "PASS",
+      "info": "items=4"
+    },
+    {
+      "name": "accounts-with-critical P1 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "threshold P1 respects min",
+      "status": "PASS",
+      "info": "count=5"
+    },
+    {
+      "name": "accounts-with-critical P2 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "threshold P2 respects min",
+      "status": "PASS",
+      "info": "count=4"
+    },
+    {
+      "name": "accounts-with-critical P3 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "threshold P3 respects min",
+      "status": "PASS",
+      "info": "count=2"
+    },
+    {
+      "name": "renewals-with P1 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "renewals items within window",
+      "status": "PASS",
+      "info": "count=5"
+    },
+    {
+      "name": "renewals sorted by date then ARR",
+      "status": "PASS",
+      "info": "count=5"
+    },
+    {
+      "name": "summary 200",
+      "status": "PASS",
+      "info": "code=200"
+    },
+    {
+      "name": "summary p1 numeric fields",
+      "status": "PASS",
+      "info": "{'accounts_with_open': 5, 'total_open': 16, 'median_arr_impacted': 137948.0}"
+    },
+    {
+      "name": "summary p1 non negative",
+      "status": "PASS",
+      "info": ""
+    },
+    {
+      "name": "summary p2 numeric fields",
+      "status": "PASS",
+      "info": "{'accounts_with_open': 5, 'total_open': 12, 'median_arr_impacted': 137948.0}"
+    },
+    {
+      "name": "summary p2 non negative",
+      "status": "PASS",
+      "info": ""
+    },
+    {
+      "name": "summary p3 numeric fields",
+      "status": "PASS",
+      "info": "{'accounts_with_open': 4, 'total_open': 7, 'median_arr_impacted': 120367.5}"
+    },
+    {
+      "name": "summary p3 non negative",
+      "status": "PASS",
+      "info": ""
+    },
+    {
+      "name": "summary p1 total_open matches accounts sum",
+      "status": "PASS",
+      "info": "summary=16 accounts_sum=16"
+    }
+  ]
+}
