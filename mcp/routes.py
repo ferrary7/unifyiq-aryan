@@ -7,7 +7,7 @@ from mcp.mapping import build_epic_to_account_map
 
 router = APIRouter(prefix="/mcp", tags=["mcp"])
 
-BASE_URL = os.getenv("UNIFYIQ_BASE_URL", "http://127.0.0.1:8000")
+BASE_URL = os.getenv("http://localhost:8000", "http://127.0.0.1:8000")
 
 def fetch_salesforce(limit=1000, offset=0) -> List[Dict[str, Any]]:
     r = requests.get(f"{BASE_URL}/salesforce", params={"limit": limit, "offset": offset}, timeout=10)
