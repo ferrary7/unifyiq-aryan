@@ -50,12 +50,20 @@ cd api
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
+Create a `.env` file in the project root with the following:
+```bash
+GEMINI_API_KEY=your_gemini_api_key_here
+```
 
 ### 2. Frontent (React)
 ```bash
 cd ui
 npm install
 npm run dev
+```
+Create a `.env.local` file inside the ui folder:
+```bash
+VITE_APP_BASE=http://localhost:8000
 ```
 
 - Access frontend at http://localhost:5173
