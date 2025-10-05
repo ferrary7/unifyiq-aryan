@@ -4,6 +4,7 @@ from api.jira.routes import router as jira_router
 from mcp.routes import router as mcp_router
 from mcp.insights import router as insights_router
 from fastapi.middleware.cors import CORSMiddleware
+from agent.routes import router as agent_router
 
 tags_metadata = [
     {"name": "salesforce", "description": "Serve Salesforce account data"},
@@ -36,3 +37,4 @@ app.include_router(salesforce_router)
 app.include_router(jira_router)  
 app.include_router(mcp_router)
 app.include_router(insights_router)
+app.include_router(agent_router)
