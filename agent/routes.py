@@ -323,6 +323,33 @@ REGION_TOK_RE = re.compile(r"\b(apac|europe|emea|north america|na|latam)\b", re.
 STAGE_EQ_RE = re.compile(r"stage\s*=\s*([a-z ]+)", re.I)
 INDUSTRY_EQ_RE = re.compile(r"industry\s*=\s*([a-z ]+)", re.I)
 
+# Actionable-signal detectors (NEW)
+PRIORITY_WORDS_RE = re.compile(r"\b(p0|p1|p2|p3|sev1|sev2|sev3|high|medium|low)\b", re.I)
+RENEWAL_RE = re.compile(r"\b(renewal|renewing|renewals)\b", re.I)
+CRITICAL_RE = re.compile(r"\b(critical|at least|\d+\s*(?:to|-)\s*\d+)\b", re.I)
+ARR_WORD_RE = re.compile(r"\barr\b|\b\d[\d,\.]*\s*[km]?\b", re.I)
+ACCOUNT_WORD_RE = re.compile(r"\baccounts?\b", re.I)
+
+def _has_actionable_signal(low: str) -> bool:
+    """
+    Return True only if the query clearly maps to our tools.
+    Prevents generic free-text (e.g., a person name) from misrouting to insights.
+    """
+    return any([
+        GROUPBY_RE.search(low),
+        SHOW_ALL_RE.search(low),
+        ACCOUNT_ID_RE.search(low),
+        PRIORITY_WORDS_RE.search(low),
+        RENEWAL_RE.search(low),
+        CRITICAL_RE.search(low),
+        ARR_WORD_RE.search(low),
+        ACCOUNT_WORD_RE.search(low),
+        REGION_TOK_RE.search(low),
+        STAGE_EQ_RE.search(low),
+        INDUSTRY_EQ_RE.search(low),
+        BUGS_ONLY_RE.search(low),
+    ])
+
 
 # -----------------------------
 # Deterministic fallback plan
@@ -412,7 +439,7 @@ def fallback_plan(q: str) -> Plan:
         )
 
     # RAW / "show all" → /mcp/accounts
-    if SHOW_ALL_RE.search(low) or "accounts" in low and "group by" not in low:
+    if SHOW_ALL_RE.search(low) or ("accounts" in low and "group by" not in low):
         params = _default_params_for("/mcp/accounts")
         steps: List[PlanStep] = [PlanStep(op="fetch", fetch=FetchArgs(endpoint="/mcp/accounts", params=params))]
         filt = _filters_from_text(low)
@@ -423,6 +450,10 @@ def fallback_plan(q: str) -> Plan:
             PlanStep(op="top", top=params.get("limit", 100)),
         ]
         return Plan(intent="answer", steps=steps, answer_template=None)
+
+    # NEW: If no actionable signal, don't guess → empty plan
+    if not _has_actionable_signal(low):
+        return Plan(intent="answer", steps=[], answer_template=None)
 
     # Default insights flows
     intent = "answer"
@@ -645,7 +676,7 @@ def agent_query(body: AgentRequest):
             "meta": meta,
         }
 
-    # 2) NEW hard guardrail: explicit AccountID lookups like "A1001"
+    # 2) Hard guardrail: explicit AccountID lookups like "A1001"
     m = ACCOUNT_ID_RE.search(q)
     if m:
         acc_id = m.group(0).upper()
@@ -690,7 +721,7 @@ def agent_query(body: AgentRequest):
             "meta": meta,
         }
 
-    # 3) OPTIONAL hard guardrail: “show/list/display all data/accounts”, “raw”
+    # 3) Hard guardrail: “show/list/display all data/accounts”, “raw”
     if SHOW_ALL_RE.search(q):
         params = _default_params_for("/mcp/accounts")
         plan = Plan(
@@ -731,6 +762,17 @@ def agent_query(body: AgentRequest):
             "answer": answer,
             "result": rows,
             "meta": meta,
+        }
+
+    # NEW: If no actionable signal, don't let LLM/fallback guess
+    if not _has_actionable_signal(q.lower()):
+        return {
+            "query": q,
+            "intent": "answer",
+            "warnings": warnings + ["No actionable signal detected. Avoiding a misleading fetch."],
+            "answer": "Sorry, I don't know how to answer that yet.",
+            "result": [],
+            "meta": {"fetches": []},
         }
 
     # 4) LLM plan
