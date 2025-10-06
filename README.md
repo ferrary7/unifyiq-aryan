@@ -45,10 +45,10 @@ unifyiq/
 ## ⚙️ Setup Instructions
 
 ### 1. Backend (FastAPI)
+
 ```bash
-cd api
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+uvicorn api.main:app --reload --port 8000
 ```
 Create a `.env` file in the project root with the following:
 ```bash
