@@ -1,7 +1,7 @@
 # 🧠 UnifyIQ – Unified Data Intelligence Platform (Mini)
 
 This repo contains a working simulation of a unified data platform that blends **Salesforce** and **Jira** datasets into one intelligent layer, with a backend (FastAPI) and a frontend (React). The platform can answer natural language queries like  
-> “Show accounts with ARR between 100k and 300k and at least 2 P1 issues”  
+> “Group by Region with bugs only for P1”  
 by dynamically planning and executing API calls.
 
 ---
