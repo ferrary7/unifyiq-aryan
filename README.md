@@ -55,7 +55,7 @@ Create a `.env` file in the project root with the following:
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-### 2. Frontent (React)
+### 2. Frontend (React)
 ```bash
 cd ui
 npm install
@@ -82,8 +82,8 @@ VITE_APP_BASE=http://localhost:8000
 
 ### MCP (Unification Layer)
 - Unified by `AccountID` and `Jira EpicLink`.
-- If `EpicLink` was missing, we generated a synthetic key by concatenating `AccountName` (Salesforce) and a hash fallback.
-- Orphan Jira issues (with no matching account) are counted separately but not discarded.
+- EpicLinks are mapped to AccountIDs using a deterministic round-robin assignment (for simulation purposes).
+- Jira issues without an `EpicLink` or without a matching account are counted as orphans but not linked to any account.
 
 ### Insights Endpoints
 - `/insights/top-revenue` → Top accounts by ARR
@@ -107,7 +107,7 @@ VITE_APP_BASE=http://localhost:8000
 ---
 
 ## 📝 Assumptions Made
-- Missing EpicLink in Jira was handled using fallback key logic as described above.
+- EpicLink-to-AccountID mapping is simulated using round-robin assignment.
 - ARR values are treated as integers (no currency conversions).
 - Data is static from Excel files. In real use, this would be replaced by live Salesforce/Jira APIs.
 - Queries are stateless; the agent doesn’t maintain conversational context.
